@@ -4,11 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @keyframes textMove {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10px);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .animated-text {
+            font-size: 2rem;
+            font-weight: bold;
+            display: inline-block;
+            animation: textMove 2s infinite ease-in-out;
+            color: #FF6347; 
+        }
+        .animated-char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease-out;
+        }
+
+        .animated-char.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
-    <H1>My Name is Yossawat Srithad</H1>
-    <h2>Fist Page From Github</h2>
+    <H1 class="animated-text">My Name is Yossawat Srithad</H1>
+    <h2 class="animated-text">Fist Page From Github</h2>
     <a href="https://hosting.udru.ac.th/it66040233146/website/homepage.html">Website</a>
+    <script>
+        const textElement = document.getElementById("animated-text");
+        const text = textElement.textContent;
+        textElement.textContent = "";
+
+        // แยกข้อความเป็นตัวอักษร
+        text.split("").forEach((char, index) => {
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.className = "animated-char";
+            textElement.appendChild(span);
+
+            // เพิ่มคลาส visible ทีละตัวด้วย delay
+            setTimeout(() => {
+                span.classList.add("visible");
+            }, index * 100); // ปรับ delay ตามลำดับ
+        });
+    </script>
     //1
 
 </body>
