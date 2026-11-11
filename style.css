@@ -1,0 +1,183 @@
+/* =================================
+  ส่วนที่ 1: Global Styles (ตั้งค่าโดยรวม)
+  =================================
+*/
+
+/* * { ... } คือการเลือกลูกเล่นทั้งหมดในหน้า
+  - box-sizing: border-box; เป็นการตั้งค่ามาตรฐานที่ช่วยให้การจัด layout ง่ายขึ้น
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ตั้งค่าให้ทั้งหน้าเว็บมีการเลื่อน (scroll) ที่นุ่มนวล
+  เวลาคลิก Navbar มันจะค่อยๆ เลื่อนไป ไม่กระโดด
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* ตั้งค่าพื้นฐานของ <body>
+  - font-family: เลือก font ที่จะใช้
+  - background-color: สีพื้นหลังของหน้า
+  - color: สีตัวอักษรหลัก
+*/
+body {
+    font-family: Arial, sans-serif; /* ใช้ฟอนต์ Arial หรือฟอนต์พื้นฐานที่ไม่มีหาง */
+    background-color: #f4f4f4; /* สีเทาอ่อน */
+    color: #333;
+    line-height: 1.6; /* ระยะห่างระหว่างบรรทัด */
+}
+
+/* =================================
+  ส่วนที่ 2: Navbar (เมนูนำทาง)
+  =================================
+*/
+
+/* ตกแต่งแถบ Navbar หลัก
+  - background-color: สีพื้นหลังของ Navbar
+  - position: fixed; ทำให้ Navbar "ลอย" และ "ติด" อยู่ด้านบนสุดของจอเสมอ
+  - top: 0; left: 0; คือการสั่งให้อยู่มุมซ้ายบน
+  - width: 100%; ให้เต็มความกว้างจอ
+  - box-shadow: เพิ่มเงาจางๆ
+  - z-index: 100; ให้อยู่เหนือกว่าองค์ประกอบอื่น
+*/
+.navbar {
+    background-color: #333; /* สีเทาเข้ม */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0; /* เว้นระยะข้างบน/ล่าง 1rem (ประมาณ 16px) */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+/* จัดการรายการเมนู (<ul>)
+  - display: flex; ทำให้ <li> ที่อยู่ข้างในมาเรียงต่อกันแนวนอน
+  - justify-content: center; จัดให้อยู่ตรงกลาง
+  - list-style-type: none; เอา "จุด" หน้า
+*/
+.navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+/* ตกแต่งตัวลิงก์ (<a>) ใน Navbar
+  - color: สีตัวอักษร (สีขาว)
+  - text-decoration: none; เอา "เส้นใต้" ออก
+  - padding: เพิ่มระยะห่างรอบๆ ตัวอักษร
+  - margin: เพิ่มระยะห่างระหว่างปุ่มเมนู
+*/
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* บนล่าง 0.5, ซ้ายขวา 1 */
+    margin: 0 0.5rem;
+    border-radius: 5px; /* ทำให้ขอบมนนิดๆ */
+    transition: background-color 0.3s; /* เพิ่ม animation เวลาเอาเมาส์ชี้ */
+}
+
+/* :hover คือ "เมื่อเอาเมาส์มาวาง"
+  - เปลี่ยนสีพื้นหลังเล็กน้อย
+*/
+.navbar .nav-links li a:hover {
+    background-color: #555;
+}
+
+
+/* =================================
+  ส่วนที่ 3: Main Content (เนื้อหาหลัก)
+  =================================
+*/
+
+/* จัดรูปแบบ <main> ที่เราตั้ง class="container"
+  - max-width: กำหนดความกว้างสูงสุด (เว็บจะไม่กว้างเกินไปบนจอใหญ่)
+  - margin: 0 auto; จัดให้อยู่ตรงกลางจอ
+  - padding: เพิ่มระยะห่างรอบๆ
+  - padding-top: 80px; 
+    *** (สำคัญมาก) *** เนื่องจาก Navbar ของเรา "ลอย" (fixed) 
+    เราต้อง "ดัน" เนื้อหาหลักลงมา 
+    ไม่งั้นมันจะไปซ่อนอยู่ "ใต้" Navbar
+*/
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 80px; /* ต้องมากกว่าความสูงของ Navbar เล็กน้อย */
+}
+
+/* ตกแต่ง <section> (แต่ละส่วน)
+  - เราตั้ง class="card" ให้ทุก section ใน HTML
+  - ทำให้มันดูเหมือน "การ์ด" ที่มีขอบมนและเงา
+*/
+.card {
+    background-color: #ffffff; /* สีขาว */
+    border-radius: 8px; /* ขอบมน */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* เงา */
+    padding: 1.5rem; /* ระยะห่างข้างใน */
+    margin-bottom: 2rem; /* ระยะห่างระหว่างการ์ด (section) */
+}
+
+/* ตกแต่งหัวข้อ (<h2>)
+*/
+.card h2 {
+    color: #333;
+    border-bottom: 2px solid #eee; /* เส้นใต้จางๆ */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ตกแต่งหัวข้อย่อย (<h3>)
+*/
+.card h3 {
+    color: #555;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* จัดระยะห่างของ <ul> ในการ์ด
+*/
+.card ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ตกแต่งส่วนของ Project
+*/
+.project-item {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+.project-item:first-child {
+    border-top: none; /* อันแรกสุดไม่ต้องมีเส้นขีด */
+}
+
+/* =================================
+  ส่วนที่ 4: Footer (ส่วนท้าย)
+  =================================
+*/
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #aaa;
+    margin-top: 2rem;
+}
+/* =================================
+  ส่วนเพิ่มเติม: รูปโปรไฟล์ (แบบ px)
+  =================================
+*/
+.profile-img {
+    width: 150px;/* ลองที่ 150px (ถ้าเล็กไปก็เพิ่ม เช่น 180px) */
+    height: 200px; /* กำหนดความสูงให้เท่าความกว้าง */
+    object-fit: cover; /* (สำคัญมาก) กันรูปสัดส่วนเพี้ยน */
+    border-radius: 30%; 
+    display: block; 
+    margin: 1rem auto; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}

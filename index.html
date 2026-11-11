@@ -1,118 +1,111 @@
 <!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Udonthani Expo 2026</title>
-    <meta name="description" content="หน้าเว็บตัวอย่างสำหรับงาน Udonthani Expo 2026" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <div class="container">
-        <nav class="topbar">
-          <div class="brand">
-            <span class="brand-mark">✦</span>
-            <span>Udonthani Expo 2026</span>
-          </div>
-          <div class="lang-switch" aria-label="language switcher">
-            <button class="lang-btn active" data-lang="th">ไทย</button>
-            <button class="lang-btn" data-lang="en">English</button>
-            <button class="lang-btn" data-lang="cn">中文</button>
-          </div>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Yossawat</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <section class="hero-content">
-          <!-- แก้ตรงนี้เพื่อเปลี่ยนข้อความหัวข้อหลัก -->
-          <h1 data-i18n="heroTitle">ยินดีต้อนรับสู่งาน Udonthani Expo 2026</h1>
-          <p data-i18n="heroSubtitle">พบกับประสบการณ์ใหม่ของเมืองอุดรธานีผ่านงานแสดงนวัตกรรม เทคโนโลยี และวัฒนธรรม</p>
-          <div class="hero-actions">
-            <a href="#about" class="btn btn-primary" data-i18n="heroPrimaryBtn">ดูรายละเอียด</a>
-            <a href="#contact" class="btn btn-secondary" data-i18n="heroSecondaryBtn">ติดต่อเรา</a>
-          </div>
-        </section>
-      </div>
-    </header>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#profile">แนะนำตัว</a></li>
+            <li><a href="#skills">ทักษะ</a></li>
+            <li><a href="#projects">ผลงาน</a></li>
+            <li><a href="#education">การศึกษา</a></li>
+            <li><a href="#activities">กิจกรรม</a></li>
+            <li><a href="#contact">ติดต่อ</a></li>
+        </ul>
+    </nav>
 
-    <main>
-      <section id="about" class="section">
-        <div class="container grid-2">
-          <div>
-            <p class="eyebrow" data-i18n="aboutEyebrow">เกี่ยวกับงาน</p>
-            <h2 data-i18n="aboutTitle">งานนี้เหมาะสำหรับครอบครัว ชุมชน และนักเรียน</h2>
-            <p data-i18n="aboutText">
-              งาน Udonthani Expo 2026 ถูกออกแบบให้เป็นพื้นที่สำหรับเรียนรู้ เที่ยวชม และสร้างแรงบันดาลใจ
-              โดยมีกิจกรรมหลากหลายที่ช่วยเชื่อมโยงคนในท้องถิ่นกับเทคโนโลยีและอนาคต
-            </p>
-          </div>
-          <div class="card">
-            <h3 data-i18n="statsTitle">สิ่งที่คุณจะได้พบ</h3>
+    <main class="container">
+
+        <section id="profile" class="card">
+            <h2>1. แนะนำตัว (Profile)</h2>
+            
             <ul>
-              <li data-i18n="statOne">นิทรรศการนวัตกรรม</li>
-              <li data-i18n="statTwo">กิจกรรมสำหรับเด็กและเยาวชน</li>
-              <li data-i18n="statThree">พื้นที่จำหน่ายสินค้าและอาหารท้องถิ่น</li>
+                <li><strong>ชื่อ-นามสกุล :</strong> ยศวัต ศรีทัด </li>
+                <li><strong>Name :</strong> Yossawat Srithad</li>
+                <li><strong>รูปโปรไฟล์:</strong> <img src="Gemini_Generated_Image_wh20xawh20xawh20.png" alt="รูปโปรไฟล์" class="profile-img"><br></li>
+                <li><strong>คณะ /มหาวิทยาลัย/สาขา:</strong> คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี</li>
+                <li><strong>ปีการศึกษา หรือ สถานะ:</strong> กำลังศึกษาอยู่ชั้นปีที่ 4 </li>
+                <li><strong>ความสนใจเฉพาะทาง:</strong> Web Dev,back end-developer,Front end-developer </li>
+                <li><strong>เป้าหมายในอนาคต (Career Interest):</strong> อยากเป็นนักวิชาการคอมพิวเตอร์ได้ทำงานหลายๆอย่างที่เกี่ยวกับคอมพิวเตอร์</li>
             </ul>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section section-alt">
-        <div class="container">
-          <p class="eyebrow" data-i18n="highlightsEyebrow">ไฮไลท์</p>
-          <h2 data-i18n="highlightsTitle">กิจกรรมที่น่าสนใจ</h2>
-          <div class="cards">
-            <article class="card">
-              <h3 data-i18n="cardOneTitle">เทคโนโลยีเพื่อชุมชน</h3>
-              <p data-i18n="cardOneText">เรียนรู้ว่าเทคโนโลยีสามารถช่วยแก้ปัญหาท้องถิ่นได้อย่างไร</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="cardTwoTitle">วัฒนธรรมและอาหาร</h3>
-              <p data-i18n="cardTwoText">ชิมรสชาติและสัมผัสค่านิยมของอุดรธานีในรูปแบบใหม่</p>
-            </article>
-            <article class="card">
-              <h3 data-i18n="cardThreeTitle">เวทีเสวนา</h3>
-              <p data-i18n="cardThreeText">ฟังความคิดเห็นจากผู้เชี่ยวชาญและผู้นำชุมชน</p>
-            </article>
-          </div>
-        </div>
-      </section>
+        <section id="skills" class="card">
+            <h2>2. ทักษะ (Skills)</h2>
+            <h3>Programming:</h3>
+            <ul>
+                <li>Python, Java, HTML/CSS/PHP, JavaScript </li>
+            </ul>
+            <h3>AI & Data:</h3>
+            <ul>
+                <li>SQL</li>
+            </ul>
 
-      <section class="section">
-        <div class="container">
-          <p class="eyebrow" data-i18n="scheduleEyebrow">กำหนดการ</p>
-          <h2 data-i18n="scheduleTitle">แผนงานในช่วงวันงาน</h2>
-          <div class="timeline">
-            <div class="timeline-item">
-              <strong data-i18n="timeOne">09:00</strong>
-              <span data-i18n="eventOne">เปิดงานและพิธีกรแนะนำพื้นที่</span>
-            </div>
-            <div class="timeline-item">
-              <strong data-i18n="timeTwo">11:00</strong>
-              <span data-i18n="eventTwo">กิจกรรมสำหรับเด็กและเวิร์กช็อป</span>
-            </div>
-            <div class="timeline-item">
-              <strong data-i18n="timeThree">14:00</strong>
-              <span data-i18n="eventThree">เสวนาและการแสดงนวัตกรรม</span>
-            </div>
-          </div>
-        </div>
-      </section>
+            <h3>Tools:</h3>
+            <ul>
+                <li>Github, VS Code, Figma,SQL Sever management studio , visual studio</li>
+            </ul>
 
-      <section id="contact" class="section section-alt">
-        <div class="container contact-box">
-          <div>
-            <p class="eyebrow" data-i18n="contactEyebrow">ติดต่อ</p>
-            <h2 data-i18n="contactTitle">พร้อมจะมาร่วมงานกันหรือยัง?</h2>
-            <p data-i18n="contactText">กรุณาติดต่อผ่านช่องทางด้านล่างเพื่อสอบถามรายละเอียดเพิ่มเติม</p>
-          </div>
-          <div class="contact-info">
-            <p>Email: info@udonthaniexpo2026.com</p>
-            <p data-i18n="contactPlace">สถานที่: อุดรธานี จังหวัดอุดรธานี</p>
-          </div>
-        </div>
-      </section>
-    </main>
+            <h3>Soft Skills:</h3>
+            <ul>
+                <li>สามารถสื่อสวารและเข้ากับผู้คนได้ง่าย , สามารถปรับตัวตามสถานะการณ์ได้เป็นอย่างดี</li>
+            </ul>
+        </section>
 
-    <script src="script.js"></script>
-  </body>
+        <section id="projects" class="card">
+            <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
+            <div class="project-item">
+                <h4>Web Project</h4>
+                <p><strong>คำอธิบาย:</strong> เว็บไซต์นี้คือเว็ปไซค์ที่เขียนขึ้นตอนปี 1 รางวัลรองชนะเลิสอันดับที่ 2 ในการแข่งขันพัฒนาเว็ปไซค์ของนักศึกษาสาขาเทคโนโลยีสารสนเทศปีที่ 1</p>
+                <p>
+                    | 
+                    <a href="website/homepage.html">Demo เว็บไซต์</a>
+                </p>
+                </div>
+
+            
+        </section>
+
+        <section id="education" class="card">
+            <h2>4. การศึกษา (Education)</h2>
+            <p>
+                <strong>วิทยาศาสตรบัณฑิต</strong><br>
+                สาขาวิชา เทคโนโลยีสารสนเทศ<br>
+                คณะ วิทยาศาสตร์<br>
+                มหาวิทยาลัย มหาวิทยาลัยราชภัฏอุดรธานี<br>
+                ปีที่เข้าศึกษา 2566-ปัจจุบัน 
+            </p>
+        </section>
+
+        <section id="activities" class="card">
+            <h2>5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
+            
+            <ul>
+                <li>เข้าร่วมการแข่งขันพัฒนาเว็ปไซต์ของนักศึกษาสาขาเทคโนโลยรสารสนเทศ ชั้นปีที่ 1 : ได้รับรางวัลรองชนะเลิศอันที่ที่ 2</li>
+                
+            </ul>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>6. ติดต่อ (Contact)</h2>
+            <p>ช่องทางการติดต่อสำหรับผู้ที่สนใจ</p>
+            <ul>
+                <li><strong>Email :</strong> 66040233146@udru.ac.th </li>
+                <li><strong>GitHub :</strong> <a href="https://github.com/Yossawat-Srithad">github.com/Yossawat-Srithad</a></li>
+                <li><strong>GitHub :</strong> <a href="https://github.com/armando-9">github.com/armando-9</a></li>
+                <li><Strong>Facebook :</Strong> <a href="https://www.facebook.com/armando.pompam.735">Facebook</a></li>
+            </ul>
+        </section>
+
+    </main> <footer>
+        <p>&copy; 2025 YossawatSrithad</p>
+    </footer>
+
+</body>
 </html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประเพณีแห่เทียนพรรษา</title>
+    <link rel="icon" type="image/png" href=pic/โลโก้ประเพณีแห่เทียนพรรษา.png>
+    
+<style>
+body {
+  margin: 0;
+  min-height:max-content;
+  background-image:url(pic/bg.jpg)  ;
+  background-position:center ;
+  background-size:cover ;
+  backdrop-filter: blur(1px) ;
+  font-family: Lemonade, sans-serif; 
+  color: #ffffff; 
+        
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 23px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ee8700;
+  color: white;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+@font-face {
+  font-family: "Lemonade";
+  src: url('font/lemonade.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: normal; 
+  
+}
+
+
+body {
+  font-family: "Lemonade", sans-serif;
+  font-size: 20px; 
+}
+     
+</style>
+</head>
+
+<body>
+    
+  
+<div class="topnav">
+  <a class="active" href="homepage.html">หน้าหลัก</a>
+  <a href="history.html">ประวัติความเป็นมา</a>
+  <a href="borncandle.html">กำเนิดเทียนพรรษา</a>
+  <a href="traditionalcandle.html">งานประเพณีแห่เทียนพรรษา</a>
+  <a href="borncandleinub.html">การกำเนิดการแห่เทียนพรรษาจังหวัดอุบลฯ</a>
+  <a href="gallery.html">อัลบั้มรูปภาพ</a>
+  <a href="http://hosting.udru.ac.th/it66040233146/">ผู้จัดทำ</a>
+  <img src="pic/โลโก้ประเพณีแห่เทียนพรรษา.png" height="65px" width="65px" style="float:right; border-radius: 50%;">
+
+</div>
+ิ<br>
+<br>
+<br>
+
+
+<div class="slideshow-container">
+  
+  <div class="mySlides fade" onclick="changeSlide(1)">
+    <div class="numbertext">1 / 3</div>
+    <img src="pic/1.jpg" style="width:1000px" height="550px">
+  </div>
+  
+  <div class="mySlides fade" onclick="changeSlide(2)">
+    <div class="numbertext">2 / 3</div>
+    <img src="pic/2.jpg" style="width:1000px" height="550px">
+  </div>
+  
+  <div class="mySlides fade" onclick="changeSlide(3)">
+    <div class="numbertext">3 / 3</div>
+    <img src="pic/3.jpg" style="width:1000px" height="550px">
+  </div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<script>
+    var slideIndex = 0;
+    showSlides();
+  
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); 
+    }
+    const slider = document.getElementById('slider');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let currentIndex = 0;
+        const slideWidth = 310; 
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < slider.children.length - 1) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+
+        function updateSlider() {
+            const translateX = -currentIndex * slideWidth;
+            slider.style.transform = `translateX(${translateX}px)`;
+        }
+
+    
+  
+
+  </script>
+</body>
+</html>
